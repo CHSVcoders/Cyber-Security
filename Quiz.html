@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://use.fontawesome.com/cbceeee21e.js" type="text/javascript"></script>
+	<meta charset="utf-8">
+	<title>Quiz</title>
+	<link rel = "icon" href = "https://img.icons8.com/nolan/64/question-mark.png">
+</head>
+<body background="https://media.gettyimages.com/videos/neon-light-question-mark-animation-on-black-background-video-id1182861738?s=640x640">
+  <div id="navBar">
+  	<font color="#008B8B"><b>
+	<img src="">
+  <i class="fa fa-bars" aria-hidden="true" onclick="togglenavbar()" id="menubar"></i>
+    <div id="navbaropen" style="display: none;">
+      <ul>
+        <li><a href="index.html"><img src="https://img.icons8.com/nolan/30/home.png"/> Home</a></li>
+        <li><a href="abtHackers.html"><img src="https://img.icons8.com/nolan/30/hacking.png/"/> About Hackers</a></li>
+        <li><a href="Malware.html"><img src="https://img.icons8.com/nolan/30/virus.png"/> Malware</a></li>
+        <li><a href="Saftey Measures.html"><img src="https://img.icons8.com/nolan/30/shield.png"/> Saftey Measures</a></li>
+        <li><a href="Quiz.html"><img src="https://img.icons8.com/nolan/30/question-mark.png"/> Quiz</a></li>
+        <li><a href="Overview.html"><img src="https://img.icons8.com/nolan/30/overview-pages-2.png"/> Overview</a></li>
+      </ul>
+    </div>
+    </div>
+    <style>
+body {
+  text-align: center;
+  font-family: cursive;
+   font-size:22px;
+  color: black;
+  background-color: white;
+  font-weight: bold;
+ 
+}
+ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-color: #111;
+}
+
+ul li {
+float: left;
+border-right:1px solid #bbb;
+}
+
+#navBar i{
+display: block;
+float: left;
+padding: 10px;
+}
+
+
+ol li{
+float: left;
+
+}
+
+li a {
+display: block;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+}
+
+li a:hover {
+background-color:#228B22;
+}
+.buttons:hover{
+  font-family: courier new;
+  color: red;
+}
+
+
+</style>
+<script>
+ function togglenavbar(){
+ var opennavbar = document.getElementById("navbaropen")
+  if (opennavbar.style.display=="none") {
+    opennavbar.style.display="block";
+  }
+
+
+    else{      
+      opennavbar.style.display="none";
+
+
+    }
+  } 
+</script>
+    <script>
+ 
+var currentScore = 0;
+window.onload = function() {
+	var scoreElement = document.getElementById("score");
+	scoreElement.value = currentScore;
+}
+function changeValueForQ1(event){
+	var scoreElement = document.getElementById("score");
+	document.getElementById("Q1").value = event.target.value;
+	if (event.target.value === "True") {
+		event.target.style.backgroundColor = "green";
+		event.target.value = "Correct";
+		currentScore += 1;
+		scoreElement.value = currentScore;
+		event.target.style.color = "black";
+	}
+
+	else {
+		event.target.style.backgroundColor = "red";
+		event.target.value = "Wrong";
+		event.target.style.color = "black";
+
+
+	}
+	var children = document.getElementById("Q1Div").children
+	for (var i=0; i<children.length; i++) {
+		children[i].disabled = true;
+	}
+}
+function changeValueForQ2(event){
+	var scoreElement = document.getElementById("score");
+	document.getElementById("Q2").value = event.target.value;
+	if (event.target.value === "False") {
+		event.target.style.backgroundColor = "green";
+		event.target.value = "Correct";
+		currentScore += 1;
+		scoreElement.value = currentScore;
+		event.target.style.color = "black";
+
+	}
+	else {
+		event.target.style.backgroundColor = "red";
+		event.target.value = "Wrong";
+		event.target.style.color = "black";
+
+
+	}
+	var children = document.getElementById("Q2Div").children
+	for (var i=0; i<children.length; i++) {
+		children[i].disabled = true;
+	}
+}
+
+function changeValueForQ3(event){
+	var scoreElement = document.getElementById("score");
+	document.getElementById("Q3").value = event.target.value;
+	if (event.target.value === "False") {
+		event.target.style.backgroundColor = "green";
+		event.target.value = "Correct";
+		currentScore += 1;
+		scoreElement.value = currentScore;
+		event.target.style.color = "black";
+
+	}
+	else {
+		event.target.style.backgroundColor = "red";
+		event.target.value = "Wrong";
+		event.target.style.color = "black";
+
+
+	}
+	var children = document.getElementById("Q3Div").children
+	for (var i=0; i<children.length; i++) {
+		children[i].disabled = true;
+
+	}
+}
+
+function changeValueForQ4(event){
+	var scoreElement = document.getElementById("score");
+	document.getElementById("Q4").value = event.target.value;
+	if (event.target.value === "True") {
+		event.target.style.backgroundColor = "green";
+		event.target.value = "Correct";
+		currentScore += 1;
+		scoreElement.value = currentScore;
+		event.target.style.color = "black";
+
+	}
+	else {
+		event.target.style.backgroundColor = "red";
+		event.target.value = "Wrong";
+		event.target.style.color = "black";
+
+
+	}
+	var children = document.getElementById("Q4Div").children
+	for (var i=0; i<children.length; i++) {
+		children[i].disabled = true;
+
+	}
+}
+function changeValueForQ5(event){
+	var scoreElement = document.getElementById("score");
+	document.getElementById("Q5").value = event.target.value;
+	if (event.target.value === "False") {
+		event.target.style.backgroundColor = "green";
+		event.target.value = "Correct";
+		currentScore += 1;
+		scoreElement.value = currentScore;
+		event.target.style.color = "black";
+
+	}
+	else {
+		event.target.style.backgroundColor = "red";
+		event.target.value = "Wrong";
+		event.target.style.color = "black";
+
+
+	}
+	var children = document.getElementById("Q5Div").children
+	for (var i=0; i<children.length; i++) {
+		children[i].disabled = true;
+
+	}
+}
+function changeValueForQ6(event){
+	var scoreElement = document.getElementById("score");
+	document.getElementById("Q6").value = event.target.value;
+	if (event.target.value === "False") {
+		event.target.style.backgroundColor = "green";
+		event.target.value = "Correct";
+		currentScore += 1;
+		scoreElement.value = currentScore;
+		event.target.style.color = "black";
+
+	}
+	else {
+		event.target.style.backgroundColor = "red";
+		event.target.value = "Wrong";
+		event.target.style.color = "black";
+
+
+	}
+	var children = document.getElementById("Q6Div").children
+	for (var i=0; i<children.length; i++) {
+		children[i].disabled = true;
+
+	}
+}
+function changeValueForQ7(event){
+	var scoreElement = document.getElementById("score");
+	document.getElementById("Q7").value = event.target.value;
+	if (event.target.value === "False") {
+		event.target.style.backgroundColor = "green";
+		event.target.value = "Correct";
+		currentScore += 1;
+		scoreElement.value = currentScore;
+		event.target.style.color = "black";
+
+	}
+	else {
+		event.target.style.backgroundColor = "red";
+		event.target.value = "Wrong";
+		event.target.style.color = "black";
+
+
+	}
+	var children = document.getElementById("Q7Div").children
+	for (var i=0; i<children.length; i++) {
+		children[i].disabled = true;
+
+	}
+}
+function changeValueForQ8(event){
+	var scoreElement = document.getElementById("score");
+	document.getElementById("Q8").value = event.target.value;
+	if (event.target.value === "True") {
+		event.target.style.backgroundColor = "green";
+		event.target.value = "Correct";
+		currentScore += 1;
+		scoreElement.value = currentScore;
+		event.target.style.color = "black";
+	}
+
+	else {
+		event.target.style.backgroundColor = "red";
+		event.target.value = "Wrong";
+		event.target.style.color = "black";
+
+
+	}
+	var children = document.getElementById("Q8Div").children
+	for (var i=0; i<children.length; i++) {
+		children[i].disabled = true;
+	}
+}
+function changeValueForQ9(event){
+	var scoreElement = document.getElementById("score");
+	document.getElementById("Q9").value = event.target.value;
+	if (event.target.value === "False") {
+		event.target.style.backgroundColor = "green";
+		event.target.value = "Correct";
+		currentScore += 1;
+		scoreElement.value = currentScore;
+		event.target.style.color = "black";
+	}
+
+	else {
+		event.target.style.backgroundColor = "red";
+		event.target.value = "Wrong";
+		event.target.style.color = "black";
+
+
+	}
+	var children = document.getElementById("Q9Div").children
+	for (var i=0; i<children.length; i++) {
+		children[i].disabled = true;
+	}
+}
+function changeValueForQ10(event){
+	var scoreElement = document.getElementById("score");
+	document.getElementById("Q10").value = event.target.value;
+	if (event.target.value === "False") {
+		event.target.style.backgroundColor = "green";
+		event.target.value = "Correct";
+		currentScore += 1;
+		scoreElement.value = currentScore;
+		event.target.style.color = "black";
+	}
+
+	else {
+		event.target.style.backgroundColor = "red";
+		event.target.value = "Wrong";
+		event.target.style.color = "black";
+
+
+	}
+	var children = document.getElementById("Q10Div").children
+	for (var i=0; i<children.length; i++) {
+		children[i].disabled = true;
+	}
+}
+function reloadQuizz() {
+	location.reload();
+	alert("Quiz has been reloaded")
+}
+</script>
+
+<font size="10" color="#FA8072">Quiz</font>
+<br>
+<br>
+<br>
+<font color="#FA8072">Your Score: <input id="score" type="text" value="Your score" readOnly></font>
+<br>
+<hr>
+<br>
+<font size="4" color="#FA8072"><p>1. Is Cyber Security Important?</p></font>
+Selected Answer: <input type="text" id="Q1" value="" readOnly>
+<br>
+<div id="Q1Div" class="question">
+	<input type="button" value="True" onclick="changeValueForQ1(event)"class="qandabuttons" >
+	<input type="button" value="False" onclick="changeValueForQ1(event)"class="qandabuttons" > 
+	<input type="button" value="Maybe" onclick="changeValueForQ1(event)"class="qandabuttons" >
+</div>
+<br>
+<hr>
+<font size="4" color="#FA8072"><p>2. Telling Out Your IP Address Is Safe.</p></font>
+Selected Answer: <input type="text" id="Q2" value="" readOnly>
+<div id="Q2Div" class="question">
+<input type="button" value="True" onclick="changeValueForQ2(event)"class="qandabuttons" >
+<input type="button" value="False" onclick="changeValueForQ2(event)"class="qandabuttons" > 
+<input type="button" value="Maybe" onclick="changeValueForQ2(event)"class="qandabuttons" >
+</div>
+<br>
+<hr>
+<font size="4" color="#FA8072"><p>3. Sharing your net banking account password is safe.</p></font>
+Selected Answer: <input type="text" id="Q3" value="" readOnly>
+<div id="Q3Div" class="question">
+<input type="button" value="True" onclick="changeValueForQ3(event)"class="qandabuttons" >
+<input type="button" value="False" onclick="changeValueForQ3(event)"class="qandabuttons" > 
+<input type="button" value="Maybe" onclick="changeValueForQ3(event)"class="qandabuttons" >
+</div>
+<br>
+<hr>
+<font size="4" color="#FA8072"><p>4. Signing out your account when you are closing the browser is good.</p></font>
+Selected Answer: <input type="text" id="Q4" value="" readOnly>
+<div id="Q4Div" class="question">
+<input type="button" value="True" onclick="changeValueForQ4(event)"class="qandabuttons" >
+<input type="button" value="False" onclick="changeValueForQ4(event)"class="qandabuttons" > 
+<input type="button" value="Maybe" onclick="changeValueForQ4(event)"class="qandabuttons" >
+</div>
+<br>
+<hr>
+<font size="4" color="#FA8072"><p>5. White hat hackers are bad.</p></font>
+Selected Answer: <input type="text" id="Q5" value="" readOnly>
+<div id="Q5Div" class="question">
+<input type="button" value="True" onclick="changeValueForQ5(event)"class="qandabuttons" >
+<input type="button" value="False" onclick="changeValueForQ5(event)"class="qandabuttons" > 
+<input type="button" value="Maybe" onclick="changeValueForQ5(event)"class="qandabuttons" >
+</div>
+<br>
+<hr>
+<font size="4" color="#FA8072"><p>6. Malware protects our computer.</p></font>
+Selected Answer: <input type="text" id="Q6" value="" readOnly>
+<div id="Q6Div" class="question">
+<input type="button" value="True" onclick="changeValueForQ6(event)"class="qandabuttons" >
+<input type="button" value="False" onclick="changeValueForQ6(event)"class="qandabuttons" > 
+<input type="button" value="Maybe" onclick="changeValueForQ6(event)"class="qandabuttons" >
+</div>
+<br>
+<hr>
+<font size="4" color="#FA8072"><p>7. Malwares cannot  control the whole pc.
+</p></font>
+Selected Answer: <input type="text" id="Q7" value="" readOnly>
+<div id="Q7Div" class="question">
+<input type="button" value="True" onclick="changeValueForQ7(event)"class="qandabuttons" >
+<input type="button" value="False" onclick="changeValueForQ7(event)"class="qandabuttons" > 
+<input type="button" value="Maybe" onclick="changeValueForQ7(event)"class="qandabuttons" >
+</div>
+<br>
+<hr>
+<font size="4" color="#FA8072">
+<p>8. Malware is any software designed to cause damage to a computer
+</p>
+</font>
+Selected Answer: <input type="text" id="Q8" value="" readOnly>
+<div id="Q8Div" class="question">
+<input type="button" value="True" onclick="changeValueForQ8(event)"class="qandabuttons" >
+<input type="button" value="False" onclick="changeValueForQ8(event)"class="qandabuttons" > 
+<input type="button" value="Maybe" onclick="changeValueForQ8(event)"class="qandabuttons" >
+</div>
+<br>
+<hr>
+<font size="4" color="#FA8072">
+<p>9. Green Hat hackers are vengenful hackers.
+</p>
+</font>
+Selected Answer: <input type="text" id="Q9" value="" readOnly>
+<div id="Q9Div" class="question">
+<input type="button" value="True" onclick="changeValueForQ9(event)"class="qandabuttons" >
+<input type="button" value="False" onclick="changeValueForQ9(event)"class="qandabuttons" > 
+<input type="button" value="Maybe" onclick="changeValueForQ9(event)"class="qandabuttons" >
+</div>
+<br>
+<hr>
+<font size="4" color="#FA8072">
+<p>10. Blue Hat hackers hack for money
+</p>
+</font>
+Selected Answer: <input type="text" id="Q10" value="" readOnly>
+<div id="Q10Div" class="question">
+<input type="button" value="True" onclick="changeValueForQ10(event)"class="qandabuttons" >
+<input type="button" value="False" onclick="changeValueForQ10(event)"class="qandabuttons" > 
+<input type="button" value="Maybe" onclick="changeValueForQ10(event)"class="qandabuttons" >
+</div>
+<br>
+<hr>
+<input type="button" class="buttons" value="Quiz Refresh" onclick="reloadQuizz()">
+</b>
+</body>
+</html>
